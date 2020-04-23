@@ -1,0 +1,1 @@
+Generic single-database configuration using [Alembic](https://alembic.sqlalchemy.org/en/latest/tutorial.html).

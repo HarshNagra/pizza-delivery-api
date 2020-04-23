@@ -1,0 +1,19 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Build the docker-compose stack
+      run: make server.install
+
+    - name: Run unit tests
+      run: make test.coverage
+    
+    - name: Run lint
+      run: make test.lint
